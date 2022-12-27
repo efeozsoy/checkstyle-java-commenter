@@ -15,8 +15,8 @@ wget -O - -q "https://github.com/checkstyle/checkstyle/releases/download/checkst
 
 exec java -jar /checkstyle.jar "${INPUT_WORKDIR}" -c "${INPUT_CHECKSTYLE_CONFIG}" ${OPT_PROPERTIES_FILE} -f xml \
  | reviewdog -f=checkstyle \
-      -name="checkstyle" \
-      -reporter="${INPUT_REPORTER:-github-pr-check}" \
+      -name="Java Automation Style Checker" \
+      -reporter="${INPUT_REPORTER:-github-pr-review}" \
       -filter-mode="${INPUT_FILTER_MODE}" \
       -fail-on-error="${INPUT_FAIL_ON_ERROR}" \
       -level="${INPUT_LEVEL}" \
