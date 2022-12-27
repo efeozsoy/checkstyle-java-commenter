@@ -27,7 +27,7 @@ inputs:
   checkstyle_config:
     description: 'Checkstyle config file'
     required: true
-    default: 'google_checks.xml'
+    default: 'custom_checker.xml'
   checkstyle_version:
     description: 'Checkstyle version'
     default: '10.5.0'
